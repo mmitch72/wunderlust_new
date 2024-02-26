@@ -1,0 +1,613 @@
+/* Mac Mitchell */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*Mobile First*/
+@import url('https://fonts.googleapis.com/css2?family=Molle&family=Montserrat&display=swap');
+
+html {
+    background-image: linear-gradient(rgb(85,188,213) 1%, white 7%);
+	font-family: Montserrat;
+}
+body
+{
+	width: 400px;
+	margin: 0 auto;
+}
+#skip
+{
+    position:absolute;
+    left:-10000px;
+    top:auto;
+    width:1px;
+    height:1px;
+    overflow:hidden;
+}
+#skip:focus
+{
+    position:static;
+    width:auto;
+    height:auto;
+}
+.sr-only
+{
+	visibility: hidden;
+}
+
+
+header img{
+	width: 40%;
+	height: auto;
+}
+h1, h2, h3
+{
+	font-family: Molle;
+}
+h4, p, q, small, nav, button, form
+{
+	font-family: Montserrat;
+}
+h1 {
+	margin-top: 20px;
+	margin-left: 26px;
+	font-size: 60px;
+}
+header p {
+	font-size: 20px;
+	margin-left: 26px;
+}
+#menu-toggle ul {
+	max-height: 0;
+	overflow: hidden;
+	grid-column: 1 / 3;
+}
+#menu-toggle ul a {
+	background-color: #499BD2;
+	color: black;
+	height: 60px;
+	text-align: center;
+	align-items: center;
+	border: 1px solid black;
+}
+#menu-toggle ul a:hover {
+	background-color: #F6D64A;
+}
+#menu-toggle input:checked ~ ul {
+	max-height: 500px;
+}
+
+#menu-toggle label{
+	background-color: #F6D64A;
+	text-transform: uppercase;
+	font-weight: bold;
+	font-size: 18px;
+	padding: 12px 60px;
+}
+#menu-toggle input:checked ~ label
+{
+	grid-column: 1 / 3;
+	background-color: black;
+	color: white;
+	text-align: center;
+}
+#menu-toggle input{
+	display: none;
+}
+#menu-toggle
+{
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	position: relative;
+	top: -170px;
+}
+#menu-toggle a{
+	display: grid;
+	background-color: #F6D64A;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-weight: bold;
+	font-size: 18px;
+	padding: 8px 100px;
+}
+
+#intro h2
+{
+	font-size: 45px;
+	margin-top: 60px;
+	margin-bottom: 15px;
+	margin-left: 26px;
+}
+#intro p{
+	font-size: 17px;
+	margin-left: 26px;
+	line-height: 2rem;
+	margin-bottom: 8px;
+}
+#intro #img-grid {
+	display: grid;
+	gap: 20px;
+}
+#img-grid img{
+	width: 100%;
+	height: auto;
+}
+
+#plan
+{
+	margin-top: 30px;
+	padding-bottom: 25px;
+	background-color: #F6D64A;
+}
+#plan h3
+{
+	font-size: 38px;
+	margin-left: 26px;
+	padding-top: 25px;
+	padding-bottom: 25px;
+}
+#plan div
+{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 25px;
+}
+#plan h4{
+	font-size: 25px;
+	text-transform: uppercase;
+	font-weight: bold;
+	margin-bottom: 30px;
+	margin-top: 15px;
+	text-align: center;
+}
+#plan section
+{
+	background-color: #55BCD5;
+	border: 4px solid white;
+	border-radius: 20px;
+	width: 300px;
+	height: 300px;
+}
+#plan img
+{
+	display:block;
+	margin-left: auto;
+	margin-right: auto;
+}
+#testimonials
+{
+	margin-top: 40px;
+	padding-bottom: 25px;
+}
+#testimonials h3
+{
+	font-size: 38px;
+	margin-left: 26px;
+	padding-top: 25px;
+	padding-bottom: 25px;
+}
+#testimonials section
+{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+#testimonials h4
+{
+	font-size: 30px;
+	text-transform: uppercase;
+	font-weight: bold;
+	margin-top: 15px;
+	margin-bottom: 5px;
+	text-align: center;
+}
+#testimonials p
+{
+	font-size: 20px;
+	margin-bottom: 5px;
+}
+#testimonials q
+{
+	font-size: 22px;
+	margin-bottom: 15px;
+	font-style: italic;
+	text-align: center;
+	width: 65%;
+}
+
+#about
+{
+	background-color: #499BD2;
+	padding-bottom: 50px;
+}
+#about h3
+{
+	font-size: 38px;
+	margin-left: 26px;
+	padding-top: 25px;
+	padding-bottom: 25px;
+}
+#about div
+{
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	justify-content: center;
+	margin-left: 20px;
+	margin-right: 20px;
+}
+#about h4
+{
+	font-size: 22px;
+	text-transform: uppercase;
+	font-weight: bold;
+	margin-top: 15px;
+	margin-bottom: 5px;
+	text-align: center;
+}
+#about p
+{
+	font-size: 22px;
+	text-align: center;
+	margin-bottom: 15px;
+}
+#about img
+{
+	width: 120px;
+	height: 120px;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#contact h3
+{
+	font-size: 38px;
+	margin-left: 26px;
+	padding-top: 25px;
+	padding-bottom: 25px;
+}
+.form-required
+{
+	font-family: Montserrat;
+	font-style: italic;
+	font-size: 24px;
+}
+#contact #names, #nums, #selects
+{
+	display: grid;
+	width: 320px;
+	margin-left: 26px;
+}
+fieldset
+{
+	display: grid;
+}
+fieldset .radio-label
+{
+	position: relative;
+	bottom: 25px;
+}
+#contact input:not(#prefEmail, #prefText, #prefPhone), .custom-select
+{
+	margin-bottom: 20px;
+	border: 4px solid #9B26B0;
+	height: 4em;
+}
+#contact label, legend
+{
+	font-size: 20px;
+	text-transform: uppercase;
+	font-weight: bold;
+	padding-bottom: 5px;
+}
+.radio-label
+{
+	display: inline-block;
+	text-transform: none;
+	font-weight: normal;
+}
+input[type="radio"] {
+  	width: 5em;
+  	height: 5em;
+  	border: 4px solid #9B26B0;
+  	border-radius: 50%;
+}
+.required{
+	display: inline-block;
+	color: #9B26B0;
+	font-size: 1.1em;
+	font-weight: bold;
+}
+::placeholder {
+	font-size: 20px;
+	padding-left: 10px;
+}
+.custom-select select
+{
+	font-size: 20px;
+	height: 64px;
+	width: 100%;
+}
+input[type="submit"] {
+	background-color: #9B26B0;
+	height: 60px;
+	color: #fff;
+	text-transform: uppercase;
+	font-size: 20px;
+}
+footer
+{
+	width: 100%;
+	background-color: #EAEAEA;
+	text-align: center;
+	line-height: 3em;
+	padding-bottom: 25px;
+}
+footer a
+{
+	display: block;
+	text-decoration: none;
+	color: black;
+}
+
+@media screen and (min-width:768px) {
+    body {
+        width: 768px;
+        margin: 0 auto;
+    }
+	h1
+	{
+		position: relative;
+		top: -80px;
+		left: 20%;
+	}
+	header p{
+		width: 450px;
+		position: relative;
+		top: -60px;
+		left: 20%;
+		line-height: 1.5rem;
+	}
+	#logo
+	{
+		position: relative;
+		top: 50px;
+		left: -15%;
+	}
+	#menu-toggle{
+		position: relative;
+		overflow: visible;
+		grid-template-columns: none;
+		top: auto;
+	}
+	#menu-toggle ul a 
+	{
+		height: unset;
+		background-color: white;
+		border: unset;
+		padding: 25px 25px;
+	}
+	#menu-toggle a
+	{
+		padding: 8px 5px;
+		text-align: center;
+		background-color: #fff;
+		color: black;
+	}
+	#menu-toggle a:hover
+	{
+		background-color: #F6D64A;
+	}
+	#menu-toggle ul {
+		overflow: unset;
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr 1fr;
+		gap: 5px;
+	}
+	#menu-toggle label
+	{
+		display: none;
+	}
+	#main-content
+	{
+		margin-top: 100px;
+	}
+	#intro #img-grid {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 20px;
+	}
+	#img-grid picture{
+		grid-column: 1 / 3;
+	}
+	#plan div
+	{
+		flex-flow: row;
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+	#testimonials section
+	{
+		width: 50%;
+	}
+	#testimonials div
+	{
+		display: flex;
+		flex-wrap: wrap;
+		flex-direction: row;
+		flex-shrink: 3;
+	}
+	#about div
+	{
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr 1fr;
+		justify-content: center;
+		margin-left: 20px;
+		margin-right: 20px;
+	}
+	#contact input:not(#prefEmail, #prefText, #prefPhone, #mySubmit), .custom-select
+	{
+		margin-bottom: 20px;
+		border: 4px solid #9B26B0;
+		height: 4em;
+		width: 700px;
+	}
+	fieldset
+	{
+		grid-template-columns: 1fr 1fr 1fr;
+	}
+	input[type="submit"] 
+	{
+		margin-top: 50px;
+		width: 50%;
+		position: relative;
+		left: 50%;
+	}
+	footer
+	{
+		padding-top: 20px;
+	}
+	footer p, footer a
+	{
+		display: inline;
+		padding-left: 20px;
+	}
+
+}
+
+@media screen and (min-width:1280px) {
+	body {
+		width: 1280px;
+		margin: 0 auto;
+	}
+	h1
+	{
+		position: relative;
+		top: 10px;
+		left: 3%;
+	}
+	#logo img
+	{
+		width: 220px;
+		height: auto;
+	}
+	#logo
+	{
+		position: relative;
+		top: 120px;
+		left: -10%;
+	}
+	header p
+	{
+		width: 100%;
+		top: 12px;
+		left: 3%;
+	}
+	#menu-toggle {
+		margin-top: -16px;
+		position: absolute;
+		grid-template-columns: none;
+		left: unset;
+		top: 0px;
+		right: 0px;
+	}
+	#menu-toggle ul a 
+	{
+		height: unset;
+		background-color: white;
+		border: unset;
+		padding: 5px 8px;
+	}
+	#intro
+	{
+		display: grid;
+		grid-auto-flow: column;
+	}
+	#plan div
+	{
+		flex-flow: row;
+		justify-content: center;
+
+	}
+	#testimonials div
+	{
+		flex-wrap: nowrap;
+	}
+	form {
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+		width: 100%;
+	}
+	#contact #names, #nums, #selects
+	{
+		width: unset;
+	}
+	#contact input:not(#prefEmail, #prefText, #prefPhone), .custom-select
+	{
+		width: unset;
+	}
+	input[type="submit"] {
+		left: unset;
+	}
+	fieldset .radio-label
+	{
+		position: unset;
+	}
+	fieldset label 
+	{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	
+}
+
+
+
+
+
+
+
+
